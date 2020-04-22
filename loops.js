@@ -10,9 +10,9 @@ const colors = ['red', 'orange', 'white', 'blue', 'gold', 'yellow'];
 //starting point: index=0; what our loop starts with
 //ending point: index < array.length; where our loop ends
 //what do we want our loop to do: index++; add one onto index;
-for (let index = 0; index < Array.length; index++) {
-  const element = array[index];
-}
+// for (let index = 0; index < Array.length; index++) {
+//  const element = array[index];
+// }
 
 
 for (let i = 0; i < colors.length; i++) {
@@ -29,11 +29,54 @@ const colorLoop = () => {
   console.log(domString);
 }
 
-const init = () => {
-  colorLoop();
-}
 
-init();
 //init is short for initialize;
 //this function tells all other functions on page to load; 
 //so it 'initializes' the other functions. 
+
+
+// Exercise 1:
+// create an array of instructor objects, each with firstName and lastName properties (keys/values)
+// loop over the instructors array
+// console.log() full instructor names ie. 'luke lancaster' 'matt gill' etc etc
+// call the function in init()
+
+const instructors = [
+  {
+    firstName: 'luke',
+    lastName: 'lancaster'
+  },
+  {
+    firstName: 'matt',
+    lastName: 'gill'
+  },
+  {
+    firstname: 'michael',
+    lastName: 'clark'
+  },
+  {
+    firstName: 'ida',
+    lastName: 'kno'
+  }
+];
+
+const instructorLoop = () => {
+  for (let i = 0; i < instructors.length; i++) {
+    console.log(`<h2>${instructors[i].firstName} ${instructors[i].lastName}</h2>`);
+  }
+console.log(instructorLoop);
+}
+
+const instructorLoop = () => {
+  let domString = '';
+  for (let i = 0; i < instructors.length; i++) {
+    domString += `<h2>${instructors[i].firstName} ${instructors[i].lastName}</h2>`;
+  }
+console.log(domString);
+}
+
+const init = () => {
+  instructorLoop();
+}
+
+init();
