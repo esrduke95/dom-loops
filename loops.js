@@ -61,6 +61,13 @@ const instructors = [
 ];
 
 const instructorLoop = () => {
+  for (let i = 0; i < instructors.length; i++) {
+    console.log(`<h2>${instructors[i].firstName} ${instructors[i].lastName}</h2>`);
+  }
+console.log(instructorLoop);
+}
+
+const instructorLoop = () => {
   let domString = '';
   for (let i = 0; i < instructors.length; i++) {
     domString += `<h2>${instructors[i].firstName} ${instructors[i].lastName}</h2>`;
